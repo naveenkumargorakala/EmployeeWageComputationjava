@@ -15,6 +15,15 @@ public class EmpWageComputation
       for(int i=0;i<WorkingDays;i++)
       {
 
+      if(Days==20 || Hrs==100)
+      { 
+         System.out.println("Working Days are completed or 100 Working hours are Reached");
+         break;
+  
+      }
+      else
+      {
+
          int Attendance = rand.nextInt(3);
          switch(Attendance)
          {
@@ -42,8 +51,10 @@ public class EmpWageComputation
                Days++;
             break;
          }
+      }
    }
      int TotalSalary=(DailyWage*c)+(k*DailyParttime) ;
      System.out.println("Salary is: "+TotalSalary);  
+      System.out.println("Hours is: "+Hrs);  
    }
 }
