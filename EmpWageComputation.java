@@ -1,15 +1,17 @@
-        import java.util.*;
+import java.util.*;
 import java.util.Random;
 public class EmpWageComputation
 {
-  
-      public static void Employee()
-      {
+     
+   public static void main(String args[])
+   {
       int DailyWage=0,WagePhr=20,empHrs;
       int WorkingDays=20,c=0,k=0;
       int DailyParttime=0;
+      System.out.println("Welcome to Employee Wage Computation Program");
       Random rand = new Random();
       int Days=0, Hrs=0;
+     
       for(int i=0;i<WorkingDays;i++)
       {
 
@@ -21,6 +23,7 @@ public class EmpWageComputation
       }
       else
       {
+
          int Attendance = rand.nextInt(3);
          switch(Attendance)
          {
@@ -48,18 +51,10 @@ public class EmpWageComputation
                Days++;
             break;
          }
-       System.out.println("Hours is: "+Hrs); 
       }
    }
-     int TotalSalary=Hrs*20;
+     int TotalSalary=(DailyWage*c)+(k*DailyParttime) ;
      System.out.println("Salary is: "+TotalSalary);  
       System.out.println("Hours is: "+Hrs);  
    }
-
-public static void main(String args[])
-{
-   System.out.println("Welcome to Employee Wage Computation Program");
-   EmpWageComputation Emp = new EmpWageComputation();
-   Emp.Employee();
-}
 }
